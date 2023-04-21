@@ -5,17 +5,17 @@ function Form(props) {
   const [lastName, setLastName] = useState("Rono");
   const [submittedData, setSubmittedData] = useState([]);
 
-  function handleFirstNameChange(event) {
-    setFirstName(event.target.value);
+  function handleFirstNameChange(e) {
+    setFirstName(e.target.value);
   }
 
-  function handleLastNameChange(event) {
-    setLastName(event.target.value);
+  function handleLastNameChange(e) {
+    setLastName(e.target.value);
   }
   const [errors, setErrors] = useState([]);
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleSubmit(e) {
+    e.preventDefault();
     // first name is required
     if (firstName.length > 0) {
       const formData = { firstName: firstName, lastName: lastName };
